@@ -79,7 +79,17 @@ except Exception as e:
     print(f"✗ MÓDULO COMBAT: FALHOU - {str(e)}")
     testes_falhados.append(("combat.py", str(e)))
 
-# Teste 7: Módulo Main
+# Teste 7: Módulo Shop
+try:
+    from shop import abrir_loja
+    assert callable(abrir_loja), "abrir_loja não é callable"
+    print(f"✓ MÓDULO SHOP: OK - funções disponíveis")
+    testes_passados.append("shop.py")
+except Exception as e:
+    print(f"✗ MÓDULO SHOP: FALHOU - {str(e)}")
+    testes_falhados.append(("shop.py", str(e)))
+
+# Teste 8: Módulo Main
 try:
     from main import Roguelike
     game = Roguelike()
@@ -94,17 +104,19 @@ except Exception as e:
     print(f"✗ MÓDULO MAIN: FALHOU - {str(e)}")
     testes_falhados.append(("main.py", str(e)))
 
-# Teste 8: Integridade de Dados
+# Teste 9: Integridade de Dados
 try:
     dados = carregar_dados()
     assert len(dados['characters']) > 0, "nenhum personagem carregado"
     assert len(dados['bosses']) > 0, "nenhum chefe carregado"
     assert len(dados['items']) > 0, "nenhum item carregado"
+    assert 'loja' in dados, "chave 'loja' não encontrada"
     print(f"✓ INTEGRIDADE DE DADOS: OK")
     print(f"  - {len(dados['characters'])} personagens")
     print(f"  - {sum(len(v) for k,v in dados['enemies'].items())} inimigos")
     print(f"  - {len(dados['bosses'])} chefes")
     print(f"  - {len(dados['items'])} itens")
+    print(f"  - Loja com {len(dados['loja']['items_venda'])} itens disponíveis")
     testes_passados.append("dados")
 except Exception as e:
     print(f"✗ INTEGRIDADE DE DADOS: FALHOU - {str(e)}")

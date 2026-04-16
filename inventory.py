@@ -59,4 +59,17 @@ def usar_item(nome_item, player, inimigos, dados):
     elif item_data['tipo'] == "ouro":
         print(Fore.YELLOW + f"\n[!] Ganhou {item_data['valor']} moedas de ouro!")
     
+    elif item_data['tipo'] == "stamina":
+        player['stamina'] = min(player['max_stamina'], player['stamina'] + item_data['valor'])
+        if item_data.get('cura_hp'):
+            cura_hp = int(player['max_hp'] * 0.2)
+            player['hp'] = min(player['max_hp'], player['hp'] + cura_hp)
+            print(Fore.CYAN + f"\n[!] Você usou {nome_item}! Stamina restaurada + {cura_hp} HP!")
+        else:
+            print(Fore.CYAN + f"\n[!] Você usou {nome_item}! Stamina restaurada em {item_data['valor']}.")
+    
+    elif item_data['tipo'] == "artefato":
+        print(Fore.MAGENTA + f"\n[!] {nome_item} é um artefato. Você o guardou com cuidado.")
+    
     return True
+

@@ -3,6 +3,7 @@ from colorama import Fore
 from data import carregar_dados
 from ui import exibir_painel, limpar_tela
 from combat import combate
+from shop import abrir_loja
 
 class Roguelike:
     def __init__(self):
@@ -84,6 +85,11 @@ class Roguelike:
                     print(Fore.CYAN + f"\n[!] Você derrotou {boss['name']}!")
                     print(Fore.YELLOW + f"[!] Obteve: {boss['drop_especial']}!")
                     self.player['items'].append(boss['drop_especial'])
+                    
+                    # Abrir loja após derrotar chefe
+                    print("\n" + Fore.MAGENTA + "Um viajante misterioso aparece com sua loja...")
+                    input("Pressione Enter...")
+                    self.ouro = abrir_loja(self.player, self.ouro, self.dados)
                 
                 exp_ganho = 50 * self.andar
                 self.exp += exp_ganho

@@ -106,7 +106,7 @@ def combate(player, inimigos, em_defesa, dados):
                         em_defesa = False
             
             # Recuperar stamina
-            stamina_recovery = max(10, int(player['max_stamina'] * 0.15))
+            stamina_recovery = max(15, int(player['max_stamina'] * 0.25))
             player['stamina'] = min(player['max_stamina'], player['stamina'] + stamina_recovery)
             
             rodada += 1

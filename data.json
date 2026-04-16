@@ -166,6 +166,42 @@
       "valor": 25,
       "desc": "Aumenta DEF em 25% por 2 turnos.",
       "raro": false
+    },
+    "Cristal Enegrecido": {
+      "tipo": "artefato",
+      "valor": 0,
+      "desc": "Artefato raro do Guardião das Trevas.",
+      "raro": true
+    },
+    "Ovo de Dragão": {
+      "tipo": "artefato",
+      "valor": 0,
+      "desc": "Artefato raro do Rei Dragão.",
+      "raro": true
+    },
+    "Joia do Abismo": {
+      "tipo": "artefato",
+      "valor": 0,
+      "desc": "Artefato raro do Senhor do Abismo.",
+      "raro": true
+    },
+    "Frasco de Stamina": {
+      "tipo": "stamina",
+      "valor": 50,
+      "desc": "Restaura 50 de Stamina.",
+      "raro": false
+    },
+    "Elixir de Resistência": {
+      "tipo": "stamina",
+      "valor": 100,
+      "desc": "Restaura 100 de Stamina e 20% de HP.",
+      "raro": true
+    },
+    "Essência do Abismo": {
+      "tipo": "artefato",
+      "valor": 0,
+      "desc": "Artefato raro do Senhor do Abismo.",
+      "raro": true
     }
   },
 
@@ -304,6 +340,20 @@
       "drop_especial": "Essência do Abismo"
     }
   ],
+
+  "loja": {
+    "items_venda": [
+      { "item": "Poção de Cura", "preco": 30 },
+      { "item": "Poção de Vida", "preco": 80 },
+      { "item": "Frasco de Stamina", "preco": 50 },
+      { "item": "Elixir de Resistência", "preco": 150 },
+      { "item": "Elixir Supremo", "preco": 120 },
+      { "item": "Pocão de Força", "preco": 60 },
+      { "item": "Pocão de Ferro", "preco": 60 },
+      { "item": "Pergaminho de Gelo", "preco": 40 },
+      { "item": "Pergaminho de Fogo", "preco": 50 }
+    ]
+  },
 
   "loot_tables": {
     "comum": ["Poção de Cura", "Poção de Força", "Pocão de Ferro"],
