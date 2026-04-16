@@ -1,0 +1,314 @@
+{
+  "characters": [
+    {
+      "type": "Guerreiro",
+      "hp": 150,
+      "max_hp": 150,
+      "atk": 15,
+      "def": 12,
+      "crit_chance": 0.1,
+      "vit": 10,
+      "items": ["Poção de Cura", "Poção de Cura"],
+      "skills": [
+        {
+          "name": "Golpe Duplo",
+          "dano": 25,
+          "custo_stamina": 20,
+          "desc": "Ataque duplo com 30% de crit."
+        },
+        {
+          "name": "Defesa de Ferro",
+          "dano": 0,
+          "custo_stamina": 15,
+          "desc": "Reduz 50% do dano por 1 turno."
+        }
+      ],
+      "stamina": 100,
+      "max_stamina": 100
+    },
+    {
+      "type": "Mago",
+      "hp": 90,
+      "max_hp": 90,
+      "atk": 22,
+      "def": 5,
+      "crit_chance": 0.15,
+      "vit": 5,
+      "items": ["Poção de Cura", "Pergaminho de Gelo"],
+      "skills": [
+        {
+          "name": "Bola de Fogo",
+          "dano": 40,
+          "custo_stamina": 25,
+          "desc": "Dano ao alvo + 15 dano colateral."
+        },
+        {
+          "name": "Escudo Mágico",
+          "dano": 0,
+          "custo_stamina": 20,
+          "desc": "Reduz 60% do dano por 1 turno."
+        }
+      ],
+      "stamina": 120,
+      "max_stamina": 120
+    },
+    {
+      "type": "Ladino",
+      "hp": 110,
+      "max_hp": 110,
+      "atk": 18,
+      "def": 8,
+      "crit_chance": 0.3,
+      "vit": 8,
+      "items": ["Bomba de Fumaça", "Poção de Cura"],
+      "skills": [
+        {
+          "name": "Ataque Furtivo",
+          "dano": 35,
+          "custo_stamina": 18,
+          "desc": "Ataque prioritário com 60% de crit."
+        },
+        {
+          "name": "Reflexo Ninja",
+          "dano": 0,
+          "custo_stamina": 15,
+          "desc": "Desvia do próximo ataque."
+        }
+      ],
+      "stamina": 110,
+      "max_stamina": 110
+    },
+    {
+      "type": "Paladino",
+      "hp": 140,
+      "max_hp": 140,
+      "atk": 17,
+      "def": 14,
+      "crit_chance": 0.08,
+      "vit": 12,
+      "items": ["Poção de Cura", "Poção de Vida"],
+      "skills": [
+        {
+          "name": "Golpe Sagrado",
+          "dano": 30,
+          "custo_stamina": 22,
+          "desc": "Ataque que cura 15 HP."
+        },
+        {
+          "name": "Aura Divina",
+          "dano": 0,
+          "custo_stamina": 25,
+          "desc": "Aumenta ATK em 30% por 2 turnos."
+        }
+      ],
+      "stamina": 100,
+      "max_stamina": 100
+    }
+  ],
+
+  "items": {
+    "Poção de Cura": {
+      "tipo": "cura",
+      "valor": 50,
+      "desc": "Cura 50 de HP instantaneamente.",
+      "raro": false
+    },
+    "Poção de Vida": {
+      "tipo": "cura",
+      "valor": 100,
+      "desc": "Cura 100 de HP instantaneamente.",
+      "raro": true
+    },
+    "Elixir Supremo": {
+      "tipo": "cura_stamina",
+      "valor": 80,
+      "desc": "Cura 80 HP e restaura 50 de Stamina.",
+      "raro": true
+    },
+    "Bomba de Fumaça": {
+      "tipo": "dano_area",
+      "valor": 30,
+      "desc": "Causa 30 de dano em todos os inimigos.",
+      "raro": false
+    },
+    "Bomba Incendiária": {
+      "tipo": "dano_area",
+      "valor": 50,
+      "desc": "Causa 50 de dano em todos os inimigos.",
+      "raro": true
+    },
+    "Pergaminho de Gelo": {
+      "tipo": "stun",
+      "valor": 0,
+      "desc": "Atordoa inimigos por 1 turno.",
+      "raro": false
+    },
+    "Pergaminho de Fogo": {
+      "tipo": "dano_area",
+      "valor": 35,
+      "desc": "Fogo sagrado causa 35 de dano.",
+      "raro": false
+    },
+    "Trouxa de Ouro": {
+      "tipo": "ouro",
+      "valor": 100,
+      "desc": "100 moedas de ouro!",
+      "raro": true
+    },
+    "Pocão de Força": {
+      "tipo": "buff",
+      "valor": 30,
+      "desc": "Aumenta ATK em 30% por 2 turnos.",
+      "raro": false
+    },
+    "Pocão de Ferro": {
+      "tipo": "buff_def",
+      "valor": 25,
+      "desc": "Aumenta DEF em 25% por 2 turnos.",
+      "raro": false
+    }
+  },
+
+  "skills": {
+    "Guerreiro": [
+      {
+        "name": "Golpe Duplo",
+        "dano": 25,
+        "custo_stamina": 20,
+        "desc": "Ataque duplo com 30% de crit."
+      },
+      {
+        "name": "Defesa de Ferro",
+        "dano": 0,
+        "custo_stamina": 15,
+        "desc": "Reduz 50% do dano por 1 turno.",
+        "tipo": "defesa"
+      }
+    ],
+    "Mago": [
+      {
+        "name": "Bola de Fogo",
+        "dano": 40,
+        "custo_stamina": 25,
+        "desc": "Dano ao alvo + 15 dano colateral."
+      },
+      {
+        "name": "Escudo Mágico",
+        "dano": 0,
+        "custo_stamina": 20,
+        "desc": "Reduz 60% do dano por 1 turno.",
+        "tipo": "defesa"
+      }
+    ],
+    "Ladino": [
+      {
+        "name": "Ataque Furtivo",
+        "dano": 35,
+        "custo_stamina": 18,
+        "desc": "Ataque prioritário com 60% de crit."
+      },
+      {
+        "name": "Reflexo Ninja",
+        "dano": 0,
+        "custo_stamina": 15,
+        "desc": "Desvia do próximo ataque.",
+        "tipo": "defesa"
+      }
+    ],
+    "Paladino": [
+      {
+        "name": "Golpe Sagrado",
+        "dano": 30,
+        "custo_stamina": 22,
+        "desc": "Ataque que cura 15 HP."
+      },
+      {
+        "name": "Aura Divina",
+        "dano": 0,
+        "custo_stamina": 25,
+        "desc": "Aumenta ATK em 30% por 2 turnos.",
+        "tipo": "buff"
+      }
+    ]
+  },
+
+  "enemies": {
+    "andar_1": [
+      { "name": "Morcego", "hp": 20, "atk": 5, "def": 1, "crit": 0.05 },
+      { "name": "Rato Gigante", "hp": 25, "atk": 6, "def": 2, "crit": 0.08 },
+      { "name": "Slime Verde", "hp": 30, "atk": 4, "def": 3, "crit": 0.02 }
+    ],
+    "andar_2": [
+      { "name": "Zumbi Lento", "hp": 45, "atk": 8, "def": 3, "crit": 0.05 },
+      { "name": "Esqueleto Fraco", "hp": 40, "atk": 10, "def": 4, "crit": 0.1 },
+      {
+        "name": "Aranha de Caverna",
+        "hp": 35,
+        "atk": 12,
+        "def": 2,
+        "crit": 0.15
+      }
+    ],
+    "andar_3": [
+      { "name": "Goblin", "hp": 50, "atk": 12, "def": 4, "crit": 0.12 },
+      { "name": "Espectro", "hp": 55, "atk": 14, "def": 3, "crit": 0.2 },
+      { "name": "Sapo Tóxico", "hp": 60, "atk": 11, "def": 5, "crit": 0.08 }
+    ],
+    "andar_4": [
+      { "name": "Orc Guerreiro", "hp": 80, "atk": 16, "def": 6, "crit": 0.1 },
+      { "name": "Cultista Negro", "hp": 70, "atk": 18, "def": 5, "crit": 0.15 },
+      { "name": "Lobo Infernal", "hp": 75, "atk": 17, "def": 4, "crit": 0.2 }
+    ],
+    "andar_5": [
+      {
+        "name": "Cavaleir Sombrio",
+        "hp": 95,
+        "atk": 20,
+        "def": 8,
+        "crit": 0.18
+      },
+      { "name": "Bruxa Anciã", "hp": 85, "atk": 22, "def": 5, "crit": 0.22 },
+      { "name": "Demônio Menor", "hp": 90, "atk": 21, "def": 7, "crit": 0.25 }
+    ]
+  },
+
+  "bosses": [
+    {
+      "andar": 3,
+      "name": "Guardião das Trevas",
+      "hp": 200,
+      "atk": 22,
+      "def": 8,
+      "crit": 0.2,
+      "desc": "Primeira vez enfrentando um verdadeiro perigo!",
+      "drop_especial": "Cristal Enegrecido"
+    },
+    {
+      "andar": 6,
+      "name": "Rei Dragão",
+      "hp": 350,
+      "atk": 30,
+      "def": 12,
+      "crit": 0.25,
+      "desc": "O antigo rei das montanhas. Prepare-se!",
+      "drop_especial": "Ovo de Dragão"
+    },
+    {
+      "andar": 10,
+      "name": "Senhor do Abismo",
+      "hp": 500,
+      "atk": 35,
+      "def": 15,
+      "crit": 0.3,
+      "desc": "O fim de tudo. A verdadeira maldição.",
+      "drop_especial": "Essência do Abismo"
+    }
+  ],
+
+  "loot_tables": {
+    "comum": ["Poção de Cura", "Poção de Força", "Pocão de Ferro"],
+    "raro": ["Poção de Vida", "Bomba Incendiária", "Elixir Supremo"],
+    "epico": ["Trouxa de Ouro", "Pergaminho de Fogo"],
+    "boss": ["Poção de Vida", "Trouxa de Ouro", "Elixir Supremo"]
+  }
+}
